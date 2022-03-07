@@ -6,7 +6,7 @@ http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
 	id="WebApp_ID" version="4.0">
 	<display-name>LibreriaMVC</display-name>
 	<welcome-file-list>
-		<welcome-file>shopping</welcome-file>
+		<welcome-file>ServletControlador</welcome-file>
 	</welcome-file-list>
 	<session-config>
 		<session-timeout>30</session-timeout>

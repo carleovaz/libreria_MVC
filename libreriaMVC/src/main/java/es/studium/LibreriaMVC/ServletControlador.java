@@ -12,7 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-@WebServlet("/shopping")
+//@webServlet es un modo de denominar al servlet en concreto luego para ser llamado
+@WebServlet("/ServletControlador")
 public class ServletControlador extends HttpServlet
 {private static final long serialVersionUID = 1L;
 public void init(ServletConfig conf) throws ServletException

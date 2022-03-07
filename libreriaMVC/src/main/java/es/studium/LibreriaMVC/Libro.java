@@ -20,12 +20,13 @@ public class Libro
 		autor = "";
 		precio = 0.0;
 	}
-	public Libro(int i, String t, String a, double p)
+	public Libro(int i, String t, String a, String e, double p)
 	{
 		setId(i);
 		titulo = t;
 		autor = a;
 		precio = p;
+		autor = e;
 	}
 	public String getTitulo()
 	{

@@ -15,7 +15,7 @@
 	<p>
 		<strong>Elegir un libro y la cantidad:</strong>
 	</p>
-	<form name="AgregarForm" action="shopping" method="POST">
+	<form name="AgregarForm" action="ServletControlador" method="POST">
 		<input type="hidden" name="todo" value="add"> Título: <select
 			name="idLibro">
 			<%
@@ -53,7 +53,7 @@
 			ElementoPedido elementoPedido = cesta.get(i);
 		%>
 		<tr>
-			<form name="borrarForm" action="shopping" method="POST">
+			<form name="borrarForm" action="ServletControlador" method="POST">
 				<input type="hidden" name="todo" value="remove"> <input
 					type="hidden" name="indiceElemento" value="<%=i%>">
 				<td><%=elementoPedido.getTitulo()%></td>
@@ -68,7 +68,7 @@
 %>
 	</table>
 	<br />
-	<form name="checkoutForm" action="shopping" method="POST">
+	<form name="checkoutForm" action="ServletControlador" method="POST">
 		<input type="hidden" name="todo" value="checkout"> <input
 			type="submit" value="Confirmar compra">
 	</form>

@@ -28,16 +28,16 @@ public class LibreriaMVC
 			String userName = "studium"; 
 			String password = "studium__"; 
 			// URL de la base de datos 
-			String url = "jdbc:mysql://localhost:3306/daw_tiendalibros?serverTimezone=UTC"; 
+			String url = "jdbc:mysql://localhost:3306/mysql_practica4dawtienda?serverTimezone=UTC"; 
 			conn = DriverManager.getConnection(url, userName, password); 
 			// Paso 3: Crear las sentencias SQL utilizando objetos de la clase Statement 
 			stmt = conn.createStatement(); 
 			// Paso 4: Ejecutar las sentencias 
-			String sqlStr = "SELECT * FROM libros"; 
+			String sqlStr = "SELECT idLibro, tituloLibro, precioLibro, autores.nombreAutor FROM libros INNER JOIN autores ON libros.idAutorFK2 = autores.idAutor"; 
 			ResultSet rs = stmt.executeQuery(sqlStr); 
 			Libro libro; 
 			while(rs.next()) { 
-				libro = new Libro(rs.getInt("idLibro"), rs.getString("autorLibro"), rs.getString("tituloLibro"), rs.getDouble("precioLibro"));
+				libro = new Libro(rs.getInt("idLibro"), rs.getString("tituloLibro"), rs.getString("precioLibro"), rs.getString("autores.nombreAutor"), rs.getDouble("precioLibro"));
 				tabla.add(libro); 
 			} 
 		}

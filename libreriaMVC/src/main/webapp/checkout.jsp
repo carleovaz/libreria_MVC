@@ -44,6 +44,6 @@ session.invalidate();
 		</tr>
 	</table>
 	<br />
-	<a href="shopping">Pulsa aquí para realizar otro pedido</a>
+	<a href="ServletControlador">Pulsa aquí para realizar otro pedido</a>
 </body>
 </html>
